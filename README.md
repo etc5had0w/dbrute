@@ -23,7 +23,7 @@ run this commands from your terminal to view help page:
 $dbrute -h
 
 
-usage: dbrute [-h] -u URL -w WORDLIST [-x EXTENTIONS] [-s SPLIT] [-t TIMEDELAY] [-he [HEADERS ...]]
+usage: dbrute [-h] -u URL -w WORDLIST [-x EXTENSIONS] [-s SPLIT] [-t TIMEDELAY] [-he [HEADERS ...]]
 
 optional arguments:
   -h, --help            show this help message and exit
