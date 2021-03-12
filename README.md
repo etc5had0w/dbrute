@@ -2,10 +2,9 @@
 
 dbrute is a powerful tool made with python3. It is mainly used for Sub-Directory Brute Forcing.
 
-It supports custom extentions search, custom headers, time delays, Splitting wordlist into parts & Parallel Processing.
+It supports custom extensions search, custom headers, time delays, Splitting wordlist into parts & Parallel Processing.
 
-The Unique Feature of dbrute is it can split any given wordlist into specific number of parts and then use all those parts to launch parallel processes for each part.
-This will increase the efficienty of the attack by high amount.
+The Unique Feature of dbrute is it can split any given wordlist into a specific number of parts and then use all those parts to launch parallel processes for each part. This will increase the efficiency of the attack by a high amount.
 
 
 ## How To Install :  
