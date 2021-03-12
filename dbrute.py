@@ -55,16 +55,16 @@ parser = argparse.ArgumentParser()
 req = parser.add_argument_group('Mandatory arguments')
 req.add_argument("-u", "--URL", help="Target URL", required=True)
 req.add_argument("-w", "--wordlist", help="Wordlist to be used", required=True)
-parser.add_argument("-x", "--extentions", help="File Extentions to search for.")
+parser.add_argument("-x", "--extensions", help="File Extensions to search for.")
 parser.add_argument("-s", "--split", help="Split wordlist into parts & run parallel tasks for faster speed.", type=int)
 parser.add_argument("-t", "--timedelay", help="Timedelay between each request.", type=int)
 parser.add_argument("-he", "--headers", help="Add Custom Headers to each request.", nargs='*', action = keyvalue)
 args = parser.parse_args()
 
-if args.extentions is not None:
-    exts = args.extentions.split (",")
+if args.extensions is not None:
+    exts = args.extensions.split (",")
 else:
-    exts = args.extentions
+    exts = args.extensions
 
 if args.split is not None:
     splt = args.split  
@@ -77,7 +77,7 @@ else:
 print(BOLD+Yellow+"\n[*] Details About This Session - "+RESET)
 print(BOLD+"[*] Target URL : "+str(args.URL))
 print("[*] Wordlist : "+str(args.wordlist))
-print("[*] Extentions : "+str(args.extentions))
+print("[*] Extensions : "+str(args.extensions))
 print("[*] Split/Multiprocesses : "+str(splt))
 print("[*] Time Delay : "+str(args.timedelay))
 print("[*] Headers : "+str(args.headers)+"\n")
@@ -86,7 +86,7 @@ def timedel():
     time.sleep(int(args.timedelay))
 
 totallines = sum(1 for line in open(args.wordlist, "r",  encoding="ISO-8859-1"))
-if args.extentions is not None:
+if args.extensions is not None:
     extotal=totallines+totallines*len(exts)
 else:
     extotal=totallines
@@ -114,7 +114,7 @@ def dbrute(wordlst):
 
 
 
-                    if args.extentions is not None:
+                    if args.extensions is not None:
                         for k in exts:
                             payload1=s.post(finalword+"."+k,headers=args.headers)
                             counter+=1
