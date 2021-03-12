@@ -27,8 +27,8 @@ usage: dbrute [-h] -u URL -w WORDLIST [-x EXTENTIONS] [-s SPLIT] [-t TIMEDELAY] 
 
 optional arguments:
   -h, --help            show this help message and exit
-  -x EXTENTIONS, --extentions EXTENTIONS
-                        File Extentions to search for.
+  -x EXTENSIONS, --extensions EXTENSIONS
+                        File Extensions to search for.
   -s SPLIT, --split SPLIT
                         Split wordlist into parts & run parallel tasks for faster speed.
   -t TIMEDELAY, --timedelay TIMEDELAY
@@ -51,7 +51,7 @@ Basic Usage With Wordlist and URL :
 dbrute -u 192.168.1.2 -w /path/to/wordlist.txt
 ```
 
-Using Extentions :
+Using Extensions :
 
 ```
 dbrute -u 192.168.1.2 -w /path/to/wordlist.txt -x php,txt,html,asp
@@ -82,7 +82,7 @@ dbrute -u 192.168.1.2 -w /path/to/wordlist.txt -t 1
 dbrute Supports These Features :
 
 * Basic Sub-Directory Busting Using Wordlist
-* Searching For Files With Specific Extentions
+* Searching For Files With Specific Extensions
 * Splitting the wordlist into specific number of parts and launch parallel processing attack.
 * Adding Time Delays Between Each Request.
 * Adding Custom Headers.
